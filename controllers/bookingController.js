@@ -44,14 +44,14 @@ export const createPaymentIntent = async (req, res) => {
 
   const start = new Date(startTime);
   const end = new Date(endTime);
-  const durationHours = (end - start) / (1000 * 60 * 60); // Convert milliseconds to hours
+  const durationHours = (end - start) / (1000 * 60 * 60);
   const totalPrice = durationHours * parkingSpot.price;
 
   const amountInCents = Math.round(totalPrice * 100);
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: amountInCents, // Stripe expects the amount in cents
+      amount: amountInCents,
       currency: "usd",
       metadata: { userObj, parkingSpotId, startTime, endTime },
     });

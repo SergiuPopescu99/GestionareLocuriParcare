@@ -61,7 +61,7 @@ export const validateParkSpot = withValidationErrors([
     .isNumeric()
     .withMessage("Humidity must be a numeric value"),
   body("owner").optional().isMongoId().withMessage("Invalid owner ID"),
-  // Validare pentru noua proprietate "paidStatus"
+
   body("paidStatus")
     .optional()
     .isIn(Object.values(PARK_PAID_STATUS))

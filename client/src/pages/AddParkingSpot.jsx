@@ -32,13 +32,10 @@ const AddParkingSpot = () => {
         const formData = new FormData();
         formData.append("file", image);
 
-        const response = await fetch(
-          "https://uploadparkpal.azurewebsites.net/api/uploadImagePark?code=Ug39TFdFmUlt-LJFzRKOJ-i_CFuxxe6BLdLcf-BkVKagAzFuy5_4RA==",
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
+        const response = await fetch("Azure storage link", {
+          method: "POST",
+          body: formData,
+        });
 
         if (!response.ok) {
           throw new Error("Error uploading image");

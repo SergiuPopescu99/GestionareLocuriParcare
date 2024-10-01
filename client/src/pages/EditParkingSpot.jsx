@@ -43,13 +43,10 @@ const EditJob = () => {
         const formData = new FormData();
         formData.append("file", image);
 
-        const response = await fetch(
-          "https://uploadparkpal.azurewebsites.net/api/uploadImagePark?code=Ug39TFdFmUlt-LJFzRKOJ-i_CFuxxe6BLdLcf-BkVKagAzFuy5_4RA==",
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
+        const response = await fetch("azure storage", {
+          method: "POST",
+          body: formData,
+        });
 
         if (response.ok) {
           const data = await response.json();
