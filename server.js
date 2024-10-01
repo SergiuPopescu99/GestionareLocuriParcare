@@ -4,7 +4,7 @@ import { dirname } from "path";
 import path from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-config({ path: path.resolve(__dirname, ".env") }); // Make sure this is the first thing that runs
+config({ path: path.resolve(__dirname, ".env") });
 
 import "express-async-errors";
 import express from "express";

@@ -9,13 +9,12 @@
 #include "addons/TokenHelper.h"
 #include "addons/RTDBHelper.h"
 
-// WiFi and Firebase credentials
 #define WIFI_SSID "ESP32Test"
-#define WIFI_PASSWORD "popa1234"
-#define API_KEY "AIzaSyAv-nhDfqC-IO-NZeKW7YOEEVmbuZhEMkQ"
-#define USER_EMAIL "sergiopop25@yahoo.com"
-#define USER_PASSWORD "sensortest"
-#define DATABASE_URL "https://sensorreadings-20c78-default-rtdb.europe-west1.firebasedatabase.app/"
+#define WIFI_PASSWORD ""
+#define API_KEY ""
+#define USER_EMAIL ""
+#define USER_PASSWORD ""
+#define DATABASE_URL ""
 
 // Firebase objects
 FirebaseData fbdoStream;
